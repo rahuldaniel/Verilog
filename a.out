@@ -1,0 +1,52 @@
+#! /usr/bin/vvp
+:ivl_version "10.3 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x55567870aa00 .scope module, "testbench" "testbench" 2 1;
+ .timescale 0 0;
+v0x55567871b470_0 .var "i", 7 0;
+v0x55567871b560_0 .net "o", 0 0, L_0x55567871b730;  1 drivers
+v0x55567871b630_0 .var "s", 2 0;
+S_0x55567870ab80 .scope module, "uut" "rep9" 2 5, 3 1 0, S_0x55567870aa00;
+ .timescale 0 0;
+    .port_info 0 /INPUT 8 "i"
+    .port_info 1 /INPUT 3 "s"
+    .port_info 2 /OUTPUT 1 "o"
+    .port_info 3 /NODIR 0 ""
+v0x5556786d50a0_0 .net "i", 7 0, v0x55567871b470_0;  1 drivers
+v0x55567871b270_0 .net "o", 0 0, L_0x55567871b730;  alias, 1 drivers
+v0x55567871b330_0 .net "s", 2 0, v0x55567871b630_0;  1 drivers
+L_0x55567871b730 .part/v v0x55567871b470_0, v0x55567871b630_0, 1;
+    .scope S_0x55567870aa00;
+T_0 ;
+    %vpi_call 2 8 "$monitor", " i=%b, s=%b, o=%b", v0x55567871b470_0, v0x55567871b630_0, v0x55567871b560_0 {0 0 0};
+    %vpi_call 2 9 "$dumpfile", "8x1M.vcd" {0 0 0};
+    %vpi_call 2 10 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x55567870aa00 {0 0 0};
+    %delay 5, 0;
+    %pushi/vec4 58, 0, 8;
+    %store/vec4 v0x55567871b470_0, 0, 8;
+    %pushi/vec4 0, 0, 3;
+    %store/vec4 v0x55567871b630_0, 0, 3;
+    %delay 5, 0;
+    %pushi/vec4 1, 0, 3;
+    %store/vec4 v0x55567871b630_0, 0, 3;
+    %delay 5, 0;
+    %pushi/vec4 6, 0, 3;
+    %store/vec4 v0x55567871b630_0, 0, 3;
+    %delay 5, 0;
+    %pushi/vec4 3, 0, 3;
+    %store/vec4 v0x55567871b630_0, 0, 3;
+    %delay 5, 0;
+    %vpi_call 2 15 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "8x1M_tb.v";
+    "8x1M.v";

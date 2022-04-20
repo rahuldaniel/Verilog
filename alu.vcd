@@ -1,0 +1,76 @@
+$date
+	Thu Feb 17 17:35:30 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module testbench $end
+$var wire 8 ! r [7:0] $end
+$var reg 8 " a [7:0] $end
+$var reg 8 # b [7:0] $end
+$var reg 3 $ s [2:0] $end
+$scope module uut $end
+$var wire 8 % a [7:0] $end
+$var wire 8 & b [7:0] $end
+$var wire 3 ' s [2:0] $end
+$var reg 8 ( r [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx (
+bx '
+bx &
+bx %
+bx $
+bx #
+bx "
+bx !
+$end
+#5
+b11111111 !
+b11111111 (
+b11001100 #
+b11001100 &
+b110011 "
+b110011 %
+b0 $
+b0 '
+#10
+b1100111 !
+b1100111 (
+b1 $
+b1 '
+#15
+b10100100 !
+b10100100 (
+b10 $
+b10 '
+#20
+b0 !
+b0 (
+b11 $
+b11 '
+#25
+b11111111 !
+b11111111 (
+b100 $
+b100 '
+#30
+b101 $
+b101 '
+#35
+b11001100 !
+b11001100 (
+b110 $
+b110 '
+#40
+b110011 !
+b110011 (
+b111 $
+b111 '
+#45
